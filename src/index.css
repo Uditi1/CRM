@@ -1,13 +1,492 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;600;700&display=swap');
+
+:root{
+	--black: #000000;
+    --black2:#0A0A0A;
+    --sky   :#229ADF;
+    --pink  :  #F5B0CB;
+	--lightgray: #DDDBD7;
+    --lightblue: #C5D9EA;
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+	font-family:'strawford';	
+	src:url('../public/fonts/Strawford-Regular.otf') format('otf'),
+		url('../public/fonts/Strawford-Regular.woff') format('woff'),
+		url('../public/fonts/Strawford-Regular.ttf') format('truetype');
+    font-weight:normal; 
 }
+
+@font-face {
+	font-family:'strawford';	
+	src:url('../public/fonts/Strawford-Bold.ttf') format('truetype');
+    font-weight:700;
+}
+
+@font-face {
+	font-family:'strawford';	
+	src:url('../public/fonts/Strawford-Medium.ttf') format('truetype');
+    font-weight:500;
+}
+
+@font-face {
+	font-family:'strawford';	
+	src:url('../public/fonts/Strawford-Light.ttf') format('truetype');
+    font-weight:300;
+}
+
+.raleway{
+	font-family: 'Raleway', sans-serif;
+}
+
+/*------------------------------------*\
+    MAIN
+\*------------------------------------*/
+/* global box-sizing */
+*,
+*:after,
+*:before {
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+	-webkit-font-smoothing:antialiased;
+	/* font-smoothing:antialiased; */
+	text-rendering:optimizeLegibility;
+}
+/* html element 62.5% font-size for REM use */
+html {
+	font-size:100%;
+	overflow-x: hidden;
+}
+body {
+	font-family:'strawford', Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    /*color: var(--black2) ;*/
+    line-height: 24px;
+	font-weight: 400;
+}
+
+*:not(a)::selection {
+	background: var(--lightgreen);
+}
+
+input:focus, textarea:focus{	outline:0;	border:0;}
+input[type=checkbox]{
+    accent-color: var(--black2);
+}
+
+/*
+body[data-bs-theme=dark] a:not(.custom-btn){
+	color: #fff;
+}
+
+
+body:not([data-bs-theme=dark]) a{
+	color: #000;
+}
+*/
+a{
+	color: #000;
+}
+
+[data-bs-theme=dark] a{
+	color:#ffffff;
+}
+
+[data-bs-theme=dark] .bg-white.custom-btn {
+    background: #444444 !important;
+}
+
+
+a:hover{
+	color: var(--green2);
+}
+
+a, a:hover{
+	text-decoration: none;
+}
+
+ul,li,h1,h2,h3,h4,h5,h6 {
+	list-style-type:none;
+	margin:0;
+	padding:0
+}
+
+img{
+	max-width: 100%;
+}
+
+p:last-child{
+	margin: 0;
+}
+
+input:not([type=checkbox]):not([type=radio]):not([type=submit]), textarea, select {
+    width: 100%;
+    color: #454545;
+	border: 1px solid #d0d0d0;
+	padding: 3px 7px;
+	font-size: 14px;
+	line-height: 15px;
+}
+
+/*------------------------------------*\
+    		WRAPPER CSS
+\*------------------------------------*/
+.container{
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.main {
+	
+}
+
+
+/*------------------------------------*\
+    		BUTTON CSS
+\*------------------------------------*/
+.custom-btn{
+	display: inline-flex;
+	padding: 10px 20px;
+	border-radius: 30px;
+	justify-content: center;
+	font-size: 15px;
+    line-height: 20px;
+	font-weight: 700;
+	background: var(--sky);
+	color: #fff ;
+	transition: all.3s;
+    border: 1px solid var(--sky);
+}
+
+.border-bl-btn{
+    border: 1px solid #000;
+    background-color: transparent;
+    color: #000;
+}
+
+.custom-btn.sm-btn{
+	line-height: 12px;
+	font-size: 12px;
+	font-weight: 500;
+	padding: 8px 20px;
+}
+
+.custom-btn img{
+	vertical-align: middle;
+}
+
+/*------------------------------------*\
+		TYPOGRAPHY FONT CSS
+\*------------------------------------*/
+.light{	    font-weight:300; }
+.regular{	font-weight:400; }
+.medium{	font-weight:500; }
+.semibold{	font-weight:600; }
+.bold{	    font-weight:700; }
+.extrabold{	font-weight:800; }
+
+h1{     font-size: 30px;	line-height: 45px;}
+h2{	    font-size: 28px;	line-height: 32px;}
+h3, .fs-24{ 	font-size: 24px;	line-height: 28px;}
+h4, .fs-18{		font-size: 18px;	line-height: 22px;}
+h5, .fs-16{		font-size: 16px;	line-height: 20px;}
+h6, .fs-14{		font-size: 14px;	line-height: 19px;}
+.fs-20    {		font-size: 20px; line-height: 26px;  }
+.fs-22    {		font-size: 22px; line-height: 28px;  }
+
+.fs-17    {     font-size: 17px;	line-height: 23px;}
+.fs-15    {     font-size: 15px;	line-height: 22px;}
+.fs-13    {     font-size: 13px;	line-height: 17px;}
+.fs-12    {     font-size: 12px;	line-height: 18px;}
+.fs-11    {     font-size: 11px;	line-height: 15px;}
+.fs-10    {     font-size: 10px;	line-height: 14px;}
+
+.rounded-10{
+	border-radius: 10px;
+}
+
+/*------------------------------------*\
+		TEXT COLOR CSS
+\*------------------------------------*/
+.text-black{	color: #000 !important;}
+.text-sky{	color: var(--sky);  }
+.text-gray{color: #999999;}
+
+.bg-sky{	background: var(--sky);	}
+.bg-pink{       background: var(--pink);      }
+.bg-lightblue{	background: var(--lightblue); }
+.bg-lightgray{	background: var(--lightgray); }
+.bg-darkpink{	background: #9A148D;        }
+.bg-brown{	background: #9D6107;        }
+.bg-red{	background: #ED4B4B !important;        }
+.bg-green{	background: #149A21;        }
+.bg-green2{	background: #14929A;        }
+.bg-red2{	background: #9A1414;        }
+.bg-blue{	background: #14319A;        }
+
+
+.bg-pink-grad{background: linear-gradient(180deg, #F5B0CB 0%, rgba(255, 255, 255, 0) 100%);}
+.bg-lightblue-grad{background: linear-gradient(180deg, #C5D9EA 0%, rgba(255, 255, 255, 0) 100%);}
+.bg-lightgray-grad{background: linear-gradient(180deg, #D3D0CB 0%, rgba(250, 250, 250, 0) 100%);}
+.bg-purple-grad{background: linear-gradient(180deg, #B19CD9 0%, rgba(255, 255, 255, 0) 100%);}
+
+
+.text-green{	color: #119627;  }
+.text-red{	    color: #ED4B4B;  }
+.text-blue{	    color: #2246C4;  }
+.text-darkpink{	color: #9A148D;  }
+.text-brown{ 	color:#9D6107;}
+.text-yellow{ 	color: #E2C00D;}
+.text-green2{ 	color: #14929A;}
+.text-red2{ 	color: #9A1414;}
+.text-blue{ 	color: #14319A;}
+
+
+
+/*------------------------------------*\
+    		FORM CSS
+\*------------------------------------*/
+
+
+
+input:focus, select:focus{
+	outline:none;
+}
+
+input[type=checkbox]{
+	width: 15px;
+	height: 15px;
+	accent-color: rgba(10, 10, 10, 0.7);;
+}
+
+textarea{
+	resize: none;
+}
+
+/*------------------------------------*\
+    		GLOBAL CSS
+\*------------------------------------*/
+.br-rad{
+	border-radius: var(--br);
+}
+
+.bg{
+	background-color: var(--bg);
+}
+
+
+/*------------------------------------*\
+    		HEADER CSS
+\*------------------------------------*/
+.top-header{
+	background: #1D1D1D;
+}
+
+.page-header{
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+
+}
+
+.checkin-btn{
+	background: #57D188;
+	border-color: #57D188;
+}
+
+.header .border-end, .header .border-start{
+	border-color: #78889B !important;
+}
+
+.site-search{
+	background: #3A3A3A;
+	border-radius: 30px;
+	padding: 5px 16px;
+}
+
+.site-search form input{
+	min-width: 200px;
+}
+
+.site-search form input, .site-search form input::placeholder{
+	color: #9B9B9B;
+}
+
+.nav_area ul li {
+	display: inline-block;
+	font-size: 12px;
+	font-weight: 500;
+	padding: 18px;
+}
+
+.nav_area ul li.active, .nav_area ul li:hover{
+	background: var(--sky);
+}
+
+.nav_area ul li.active a, .nav_area ul li:hover a{
+	color: #fff;
+}
+
+
+ul.sub-menu li {	
+	position: relative;
+	display: block;
+}
+ul.sub-menu li::before{
+	content: '';
+	background-color: var(--black);
+	width: 5px;
+	height: 5px;
+	border-radius: 50%;
+	position: absolute;
+	left: 20px;
+	top: 25px;
+}
+ul.sub-menu li:hover ul.sub-menu li::before{
+	background-color: #fff !important;
+}
+ul.sub-menu li a {
+    padding: 5px 10px 5px 10px;
+    font-size: 12px;
+	line-height: 12px;
+    display: inline-block;
+    font-weight: 500;
+	color: var(--black2) !important;
+}
+
+.nav_area ul li:hover span.arrow{
+	color: #fff !important;
+}
+
+
+/* ------ THEME MODE ----- */
+
+span.theme-mode{
+	display: inline-block;
+	vertical-align: middle;
+}
+
+span.theme-mode label{    
+    width: 55px;
+	height:26px;
+    background:#3f3f3f;
+    padding: 3px 5px;
+    border-radius: 25px;
+    margin-left: 10px;
+	cursor: pointer;
+	position: relative;	
+}
+
+span.theme-mode label:before{
+	content: '';
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background: #fff;
+	border-radius: 50%;
+	box-shadow: 0 0 5px #111;
+	position: absolute;
+	left: 4px;
+	transition: transform 0.2s linear;
+}
+
+span.theme-mode input:checked ~ label{
+	background-color: #000;
+}
+
+span.theme-mode input:checked ~ label:before{
+	background: #fff; 
+	transform: translateX(24px);
+}
+
+span.theme-mode  i.fa-sun{	
+	padding-right: 4px;
+	color: #f1c40f;
+}
+span.theme-mode  .fa-moon {
+    color: #f1c40f;
+	padding-left: 3px;
+}
+
+/* ---------------PROFILE-DROPDOWN------------ */
+.rounded-4{
+	border-radius: 4px !important;
+}
+
+
+
+.profile-dropdown{
+	background: linear-gradient(11.88deg, #B0E2FF 0%, #FFFFFF 100%);
+	max-width: 345px;
+	width: 345px;
+	position: fixed;
+    z-index: 2;
+    top: 0;
+    height: 100%;
+    right: -100%;
+    transition: all .4s;
+}
+.profile-dropdown.show{
+	right: 0;
+}
+.profile-dropdown .collapse-butn{
+	background: rgba(250, 250, 250, 0.4);
+	box-shadow: inset 2.62px -2.62px 2.62px rgba(210, 210, 210, 0.382), inset -2.62px 2.62px 2.62px rgba(255, 255, 255, 0.382);
+	backdrop-filter: blur(13.231px);
+}
+.profile-dropdown a[aria-expanded="true"], .profile-dropdown a.collapse-butn:hover {
+    background: var(--sky);
+    color: #fff;
+}
+.profile-dropdown form input{
+	border: 1px solid #0A0A0A !important;
+	border-radius: 4px;
+	background: transparent;
+	padding: 7px !important;
+}
+.open-collapse{
+	position: fixed;
+    top: -100%;
+	right: 0;
+	height: 100%;
+	width: 345px;
+    transition: all .4s;
+	z-index: 1;
+	background: linear-gradient(11.88deg, #B0E2FF 0%, #FFFFFF 100%);
+}
+.open-collapse.show{
+	top: 0;
+}
+
+.lead-box{
+	min-height: 190px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.lead-box table tr > *:last-child{
+	width: 100px;
+	padding-right: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

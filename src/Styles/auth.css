@@ -1,0 +1,106 @@
+
+
+/*------------------------------------*\
+    		LOGIN CSS
+\*------------------------------------*/
+
+
+.login-bg > .container:before {
+	content: '';
+    display: block;
+    width: 307px;
+    height: 307px;
+	position: absolute;
+	right: 0;
+	top: 0;
+    background: url(../img/icon/orange-shape.svg) no-repeat top right;
+}
+
+.login-bg > .container:after {
+	content: '';
+    display: block;
+    width: 307px;
+    height: 307px;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+    background: url(../img/icon/purple-shape.svg) no-repeat bottom right;
+	
+}
+
+.login-bg > .container > div{
+	position: relative;
+	z-index: 2;
+}
+
+.login-bg{
+    min-height: 100vh;
+}
+
+.login-left{
+    background: rgba(247, 247, 247, 0.25);
+    backdrop-filter: blur(44.0027px);
+    border-radius: 40px 0px 0px 40px;
+}
+
+.login-right{
+    background: linear-gradient(136.21deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.6) 100%);
+    backdrop-filter: blur(27.5px);    
+    border-radius: 0px 40px 40px 0px;
+}
+
+.login-bg:before{
+    content: '';
+    display: block;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(143.94deg, rgba(176, 214, 233, 0) 0%, #229ADF 100%);
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+
+.login-bg:after{
+    content: '';
+    display: block;
+    width: 50%;
+    height: 100%;
+    background: #E7EAF2;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+}
+
+form.signup-form input:not([type="checkbox"]), form.signup-form select {
+    width: 100%;
+    padding: 15px 35px !important;
+    border-radius: 35px;
+    color: var(--black2) !important;
+    font-weight: 500;
+    font-size: 14px !important;
+	line-height: 24px !important;
+    border: 1px solid var(--black2);
+}
+
+form.signup-form  .otp-field input{
+    width: 43px !important;
+    height: 48px;
+    border-radius: 10px;
+    -webkit-appearance: none;
+    padding: 5px !important;
+    text-align: center;
+}
+
+.blur-body{
+	filter: blur(50px);
+}
+
+.pwd-success{
+	background: linear-gradient(80.85deg, #4AB3F0 -8.54%, #FCFCFC 105.37%);
+	box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.25);
+	border-radius: 20px;
+	max-width: 660px;
+	width: 100%;
+}
