@@ -8,9 +8,9 @@ import CompanyLogo from "../../img/logo.svg";
 
 const Header = () => {
   return (
-    <div class="header py-3">
-      <div class="container">
-        <div class="site-logo">
+    <div className="header py-3">
+      <div className="container">
+        <div className="site-logo">
           <a href="#">
             <img src={CompanyLogo} />
           </a>

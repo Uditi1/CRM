@@ -11,35 +11,35 @@ import PasswordIcon from "../../img/icon/key.svg";
 const LoginForm = () => {
   return (
     <>
-      <form action="" class="signup-form px-lg-5">
-        <div class="form-field mb-3">
-          <label for="" class="fs-12 d-block pb-1">
+      <form action="" className="signup-form px-lg-5">
+        <div className="form-field mb-3">
+          <label for="" className="fs-12 d-block pb-1">
             E-mail
           </label>
-          <div class="position-relative">
+          <div className="position-relative">
             <img
               src={Emailicon}
               alt=""
-              class="position-absolute ms-3 mt-3 pt-1"
+              className="position-absolute ms-3 mt-3 pt-1"
             />
             <input
               type="text"
               placeholder="Mobile Number or Email Address"
-              class="ps-5"
+              className="ps-5"
               value="abc123@gmail.com"
             />
           </div>
         </div>
 
-        <div class="form-field mb-3">
-          <label for="" class="fs-12 d-block pb-1">
+        <div className="form-field mb-3">
+          <label for="" className="fs-12 d-block pb-1">
             Password
           </label>
-          <div class="position-relative">
+          <div className="position-relative">
             <img
               src={PasswordIcon}
               alt=""
-              class="position-absolute ms-3 mt-3 pt-1"
+              className="position-absolute ms-3 mt-3 pt-1"
             />
             <input
               type="password"
@@ -50,7 +50,7 @@ const LoginForm = () => {
           </div>
         </div>
 
-        <div class="form-field mb-4">
+        <div className="form-field mb-4">
           <div className="d-flex align-items-center justify-content-between ">
             <div className="custom-checkbox">
               <input
