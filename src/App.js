@@ -7,6 +7,7 @@ import ForgotPassword from "./Pages/ForgotPassword/ForgotPassword";
 import EnterOtp from "./Pages/EnterOtp/EnterOtp";
 import Dashboard from "./Pages/Dashboard/Dashboard";
 import OrgDashboard from "./Pages/Dashboard/OrgDashboard";
+import NewStage from "./Pages/Manage/Stage/NewStage";
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/forgotpassword" element={<ForgotPassword />} />
           <Route path="/enterotp" element={<EnterOtp />} />
+          <Route path="/manage-stagesnew" element={<NewStage />} />
         </Routes>
       </div>
     </Router>
